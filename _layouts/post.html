@@ -1,67 +1,78 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+---
 
-<head>
+{% if page.style == "record" %}
 
-    <meta charset="UTF-8">
+<main class="record-post-page">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <article class="record-sleeve">
 
-    <title>{{ page.title }} ✦ Rubee Rae Flips Records</title>
+        <div class="record-label">
+            RUBE RAE RECORDS
+            <span>RR-{{ page.date | date: "%y%m%d" }}</span>
+        </div>
 
-    <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+        <p class="record-number">
+            CATALOGUE NO. {{ page.date | date: "%Y.%m.%d" }}
+        </p>
 
-</head>
+        <h1>
+            {{ page.title }}
+        </h1>
 
-<body>
+        {% if page.subtitle %}
+        <p class="record-subtitle">
+            {{ page.subtitle }}
+        </p>
+        {% endif %}
 
+        {% if page.cover %}
+        <img
+            class="record-cover"
+            src="{{ page.cover | relative_url }}"
+            alt="{{ page.title }}"
+        >
+        {% else %}
+        <div class="record-cover-placeholder">
+            ♪
+        </div>
+        {% endif %}
 
-<div class="marquee">
+        <div class="record-notes">
 
-    <span>
-        ✦ RUBEE RAE FLIPS RECORDS ✦
-        BROADCASTING FROM SOMEWHERE ON THE INTERNET ✦
-        MUSIC • MEMORIES • STORIES • NONSENSE ✦
-    </span>
+            <p class="record-side">
+                SIDE A
+            </p>
 
-</div>
+            <div class="record-content">
+                {{ content }}
+            </div>
 
+        </div>
 
-<nav>
+        <div class="record-footer">
+            FLIP THE RECORD ✦ READ THE LINER NOTES ✦
+        </div>
 
-    <a href="{{ '/' | relative_url }}">
-        HOME
-    </a>
+    </article>
 
-    <a href="{{ '/#latest' | relative_url }}">
-        BLOG
-    </a>
-
-    <a href="{{ '/#music' | relative_url }}">
-        MUSIC
-    </a>
-
-    <a href="{{ '/#gallery' | relative_url }}">
-        GALLERY
-    </a>
-
-    <a href="{{ '/#about' | relative_url }}">
-        ABOUT
-    </a>
-
-</nav>
-
-
-<main>
-
-    <article class="blog-post">
+</main>
 
 
-        <div class="post-header">
+{% else %}
 
-            <p class="post-date">
-                {{ page.date | date: "%B %d, %Y" }}
+<main class="journal-post-page">
+
+    <article class="journal-paper">
+
+        <div class="journal-tape tape-left"></div>
+        <div class="journal-tape tape-right"></div>
+
+        <header class="journal-header">
+
+            <p class="journal-date">
+                {{ page.date | date: "%A, %B %d, %Y" }}
             </p>
 
             <h1>
@@ -69,54 +80,39 @@
             </h1>
 
             {% if page.subtitle %}
-
-            <p class="post-subtitle">
+            <p class="journal-subtitle">
                 {{ page.subtitle }}
             </p>
-
             {% endif %}
 
-        </div>
+        </header>
 
 
-        <div class="post-content">
+        <div class="journal-content">
 
             {{ content }}
 
         </div>
 
 
-        <div class="post-footer">
+        <footer class="journal-footer">
 
             <p>
-                ✦ END OF TRANSMISSION ✦
+                ✦ END OF ENTRY ✦
+            </p>
+
+            <p>
+                — R.
             </p>
 
             <a href="{{ '/' | relative_url }}">
                 ← RETURN TO THE ATTIC
             </a>
 
-        </div>
-
+        </footer>
 
     </article>
 
 </main>
 
-
-<footer>
-
-    <h2>
-        KEEP FLIPPING.
-    </h2>
-
-    <p>
-        ★ RUBEE RAE FLIPS RECORDS ★
-    </p>
-
-</footer>
-
-
-</body>
-
-</html>
+{% endif %}
