@@ -1,0 +1,13 @@
+title: "Rube Rae Flips Records"
+
+description: "Music, memories, photographs, stories, and other nonsense."
+
+url: "https://rubeerae-flipsrecords.github.io"
+
+markdown: kramdown
+
+permalink: /blog/:title/
+
+collections:
+  posts:
+    output: true
