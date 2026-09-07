@@ -1393,3 +1393,469 @@ footer p {
     }
 
 }
+/* =========================================================
+   JOURNAL + RECORD SLEEVE POSTS
+========================================================= */
+
+
+/* ---------------------------------------------------------
+   JOURNAL ENTRIES
+--------------------------------------------------------- */
+
+.journal-post-page {
+    width: 100%;
+    padding: 80px 20px;
+}
+
+
+.journal-paper {
+    position: relative;
+
+    max-width: 850px;
+
+    margin: 40px auto;
+
+    padding: 70px 80px;
+
+    background: #f7f0dd;
+
+    border: 2px solid #211817;
+
+    box-shadow:
+        12px 12px 0 #741c1c,
+        -8px -8px 0 #f2c14e;
+
+    transform: rotate(-0.5deg);
+}
+
+
+/* little tape pieces */
+
+.journal-tape {
+    position: absolute;
+
+    width: 150px;
+    height: 35px;
+
+    background: rgba(210, 190, 145, .75);
+
+    transform: rotate(-4deg);
+}
+
+
+.tape-left {
+    top: -15px;
+    left: 70px;
+}
+
+
+.tape-right {
+    bottom: -15px;
+    right: 70px;
+
+    transform: rotate(5deg);
+}
+
+
+.journal-header {
+    text-align: center;
+
+    padding-bottom: 35px;
+
+    border-bottom:
+        3px double #211817;
+}
+
+
+.journal-date {
+    font-family:
+        "DM Mono",
+        monospace;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    font-size: .75rem;
+
+    color: #741c1c;
+}
+
+
+.journal-header h1 {
+    margin: 20px 0;
+
+    font-family:
+        "Abril Fatface",
+        serif;
+
+    font-size:
+        clamp(3rem, 8vw, 6rem);
+
+    line-height: .95;
+
+    color: #741c1c;
+}
+
+
+.journal-subtitle {
+    font-family:
+        "Zeyada",
+        cursive;
+
+    font-size: 2.2rem;
+
+    color: #1d3c5a;
+}
+
+
+.journal-content {
+    margin:
+        50px auto;
+
+    max-width: 700px;
+
+    font-family:
+        "Libre Baskerville",
+        serif;
+
+    font-size: 1.08rem;
+
+    line-height: 2;
+}
+
+
+.journal-content h2 {
+    margin-top: 55px;
+
+    font-family:
+        "Zeyada",
+        cursive;
+
+    font-size: 3rem;
+
+    color: #741c1c;
+}
+
+
+.journal-content h3 {
+    font-family:
+        "Abril Fatface",
+        serif;
+
+    color: #1d3c5a;
+}
+
+
+.journal-content blockquote {
+    margin: 40px 0;
+
+    padding: 25px 30px;
+
+    background: #e5dcc8;
+
+    border-left:
+        7px solid #741c1c;
+
+    font-family:
+        "Zeyada",
+        cursive;
+
+    font-size: 2rem;
+
+    line-height: 1.3;
+}
+
+
+.journal-content img {
+    max-width: 100%;
+
+    display: block;
+
+    margin: 45px auto;
+
+    border:
+        5px solid #211817;
+
+    box-shadow:
+        8px 8px 0 #741c1c;
+}
+
+
+.journal-footer {
+    text-align: center;
+
+    padding-top: 30px;
+
+    border-top:
+        3px double #211817;
+
+    font-family:
+        "DM Mono",
+        monospace;
+}
+
+
+.journal-footer a {
+    color: #741c1c;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+
+/* ---------------------------------------------------------
+   RECORD SLEEVE POSTS
+--------------------------------------------------------- */
+
+.record-post-page {
+    width: 100%;
+
+    padding: 80px 20px;
+}
+
+
+.record-sleeve {
+    max-width: 850px;
+
+    margin: 40px auto;
+
+    padding: 55px;
+
+    background: #e6dcc6;
+
+    border:
+        6px solid #211817;
+
+    box-shadow:
+        18px 18px 0 #741c1c;
+
+    position: relative;
+
+    text-align: center;
+}
+
+
+.record-label {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-bottom: 15px;
+
+    border-bottom:
+        3px solid #211817;
+
+    font-family:
+        "DM Mono",
+        monospace;
+
+    font-size: .75rem;
+
+    letter-spacing: 2px;
+}
+
+
+.record-label span {
+    color: #741c1c;
+}
+
+
+.record-number {
+    margin-top: 30px;
+
+    font-family:
+        "DM Mono",
+        monospace;
+
+    font-size: .7rem;
+
+    letter-spacing: 3px;
+
+    color: #741c1c;
+}
+
+
+.record-sleeve h1 {
+    margin: 20px auto 10px;
+
+    max-width: 700px;
+
+    font-family:
+        "Abril Fatface",
+        serif;
+
+    font-size:
+        clamp(3rem, 8vw, 6.5rem);
+
+    line-height: .9;
+
+    color: #741c1c;
+}
+
+
+.record-subtitle {
+    font-family:
+        "Zeyada",
+        cursive;
+
+    font-size: 2.3rem;
+
+    color: #1d3c5a;
+}
+
+
+.record-cover {
+    width: min(100%, 600px);
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    display: block;
+
+    margin: 40px auto;
+
+    border:
+        5px solid #211817;
+
+    box-shadow:
+        10px 10px 0 #211817;
+}
+
+
+.record-cover-placeholder {
+    width: min(100%, 600px);
+
+    aspect-ratio: 1 / 1;
+
+    margin: 40px auto;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #741c1c;
+
+    color: #f7f0dd;
+
+    font-size: 8rem;
+
+    border:
+        5px solid #211817;
+
+    box-shadow:
+        10px 10px 0 #211817;
+}
+
+
+.record-notes {
+    margin-top: 60px;
+
+    padding-top: 35px;
+
+    border-top:
+        4px double #211817;
+}
+
+
+.record-side {
+    font-family:
+        "DM Mono",
+        monospace;
+
+    letter-spacing: 4px;
+
+    font-size: .8rem;
+
+    color: #741c1c;
+}
+
+
+.record-content {
+    max-width: 700px;
+
+    margin: 35px auto;
+
+    text-align: left;
+
+    font-family:
+        "Libre Baskerville",
+        serif;
+
+    font-size: 1.05rem;
+
+    line-height: 1.9;
+}
+
+
+.record-content h2 {
+    font-family:
+        "Abril Fatface",
+        serif;
+
+    color: #741c1c;
+
+    font-size: 2.5rem;
+
+    margin-top: 50px;
+}
+
+
+.record-content img {
+    max-width: 100%;
+
+    display: block;
+
+    margin: 40px auto;
+
+    border:
+        4px solid #211817;
+}
+
+
+.record-footer {
+    margin-top: 50px;
+
+    padding-top: 20px;
+
+    border-top:
+        2px solid #211817;
+
+    font-family:
+        "DM Mono",
+        monospace;
+
+    font-size: .7rem;
+
+    letter-spacing: 2px;
+}
+
+
+
+/* ---------------------------------------------------------
+   MOBILE
+--------------------------------------------------------- */
+
+@media (max-width: 700px) {
+
+    .journal-paper {
+        padding: 45px 25px;
+    }
+
+    .record-sleeve {
+        padding: 30px 20px;
+    }
+
+    .journal-header h1,
+    .record-sleeve h1 {
+        font-size: 3.2rem;
+    }
+
+}
