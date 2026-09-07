@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>{{ page.title }} ✦ Rubee Rae Flips Records</title>
+
+    <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+
+</head>
+
+<body>
+
+
+<div class="marquee">
+
+    <span>
+        ✦ RUBEE RAE FLIPS RECORDS ✦
+        BROADCASTING FROM SOMEWHERE ON THE INTERNET ✦
+        MUSIC • MEMORIES • STORIES • NONSENSE ✦
+    </span>
+
+</div>
+
+
+<nav>
+
+    <a href="{{ '/' | relative_url }}">
+        HOME
+    </a>
+
+    <a href="{{ '/#latest' | relative_url }}">
+        BLOG
+    </a>
+
+    <a href="{{ '/#music' | relative_url }}">
+        MUSIC
+    </a>
+
+    <a href="{{ '/#gallery' | relative_url }}">
+        GALLERY
+    </a>
+
+    <a href="{{ '/#about' | relative_url }}">
+        ABOUT
+    </a>
+
+</nav>
+
+
+<main>
+
+    <article class="blog-post">
+
+
+        <div class="post-header">
+
+            <p class="post-date">
+                {{ page.date | date: "%B %d, %Y" }}
+            </p>
+
+            <h1>
+                {{ page.title }}
+            </h1>
+
+            {% if page.subtitle %}
+
+            <p class="post-subtitle">
+                {{ page.subtitle }}
+            </p>
+
+            {% endif %}
+
+        </div>
+
+
+        <div class="post-content">
+
+            {{ content }}
+
+        </div>
+
+
+        <div class="post-footer">
+
+            <p>
+                ✦ END OF TRANSMISSION ✦
+            </p>
+
+            <a href="{{ '/' | relative_url }}">
+                ← RETURN TO THE ATTIC
+            </a>
+
+        </div>
+
+
+    </article>
+
+</main>
+
+
+<footer>
+
+    <h2>
+        KEEP FLIPPING.
+    </h2>
+
+    <p>
+        ★ RUBEE RAE FLIPS RECORDS ★
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
