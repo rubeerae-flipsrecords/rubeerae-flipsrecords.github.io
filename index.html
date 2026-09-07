@@ -143,147 +143,67 @@
 ===================================================== -->
 
 <section id="latest">
-
+<section id="latest">
 
     <h2 class="section-title">
         ✦ LATEST FROM THE ATTIC ✦
     </h2>
 
 
-    <div class="newspaper">
+    <div class="blog-list">
 
 
-        <div class="newspaper-header">
+        {% for post in site.posts limit:10 %}
 
-            <p>
-                RUBEE RAE FLIPS RECORDS • VOL. 01 • 2026
+        <article class="blog-card">
+
+
+            <p class="post-date">
+                {{ post.date | date: "%B %d, %Y" }}
             </p>
+
 
             <h2>
-                The Daily Everything
+
+                <a href="{{ post.url | relative_url }}">
+                    {{ post.title }}
+                </a>
+
             </h2>
 
-            <p>
-                MUSIC • POSTS • THOUGHTS • OTHER!
+
+            {% if post.subtitle %}
+
+            <p class="post-subtitle">
+                {{ post.subtitle }}
             </p>
 
-        </div>
+            {% endif %}
 
 
+            <div class="post-excerpt">
 
-        <div class="columns">
+                {{ post.excerpt }}
 
-
-            <article>
-
-                <h3>
-                    ✦ WELCOME TO MY WEBSITE ✦
-                </h3>
-
-                <p>
-                    <strong>
-                        SEPTEMBER 7, 2026
-                    </strong>
-                </p>
-
-                <p>
-                    Well, hello there.
-                </p>
-
-                <p>
-                    If you're reading this, congratulations:
-                    I didn't even know how to get here at first, so
-                    you're already smarter than me.
-                </p>
-
-                <p>
-                    This website is going to be a collection of
-                    things I like, things I make, things I find
-                    interesting, and probably alot of rambling nonsense, so have fun!
-                </p>
-
-                <p>
-                    Consider this the first page of the scrapbook.
-                </p>
-
-                <p>
-                    <a href="#">
-                        READ MORE →
-                    </a>
-                </p>
-
-            </article>
+            </div>
 
 
-            <article>
-
-                <h3>
-                    ✦ CURRENTLY LISTENING ✦
-                </h3>
-
-                <p>
-                    <strong>
-                        MUSIC NOTES
-                    </strong>
-                </p>
-
-                <p>
-                    What has been playing on the record player
-                    lately? What songs have been stuck in my head?
-                    What album deserves to be played approximately
-                    seventeen times in a row?
-                </p>
-
-                <p>
-                    This section can become a regularly updated
-                    music diary.
-                </p>
-
-                <p>
-                    <a href="#">
-                        READ MORE →
-                    </a>
-                </p>
-
-            </article>
+            <a
+                class="read-more"
+                href="{{ post.url | relative_url }}"
+            >
+                READ THE WHOLE THING →
+            </a>
 
 
-            <article>
+        </article>
 
-                <h3>
-                    ✦ RANDOM THOUGHTS ✦
-                </h3>
+        {% endfor %}
 
-                <p>
-                    <strong>
-                        FROM THE NOTEBOOK
-                    </strong>
-                </p>
-
-                <p>
-                    Sometimes you don't need an important reason
-                    to write something down.
-                </p>
-
-                <p>
-                    This is where the weird observations go.
-                    Little stories. Memories. Things I noticed.
-                    Things I probably should have forgotten but
-                    absolutely did not.
-                </p>
-
-                <p>
-                    <a href="#">
-                        READ MORE →
-                    </a>
-                </p>
-
-            </article>
-
-
-        </div>
 
     </div>
+
+</section>
 
 </section>
 
